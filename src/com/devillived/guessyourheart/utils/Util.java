@@ -30,11 +30,11 @@ public class Util {
 		return (int) (pxValue / scale + 0.5f);
 	}
 
-	public static String formatException(Throwable t) {
+	public static String formatException(Throwable e) {
 		Writer sw = new StringWriter();
 		PrintWriter pw = new PrintWriter(sw);
-		t.printStackTrace(pw);
-		Throwable cause = t.getCause();
+		e.printStackTrace(pw);
+		Throwable cause = e.getCause();
 		while (cause != null) {
 			cause.printStackTrace(pw);
 			cause = cause.getCause();

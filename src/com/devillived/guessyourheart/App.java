@@ -8,6 +8,7 @@ import android.util.Log;
 import com.devillived.guessyourheart.utils.Util;
 
 public class App extends Application {
+	public static final String TAG="arith-";
 	private static App sInstance;
 
 	public static App get() {
