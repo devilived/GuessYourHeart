@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.util.Log;
 
@@ -43,9 +44,19 @@ public class Util {
 		return result;
 	}
 
+	private static Typeface sTf;
+
+	public static Typeface getTypeFace() {
+		if (sTf == null) {
+			sTf = Typeface.createFromAsset(App.get().getAssets(),
+					"fonts/hanyixuefengjian.ttf");
+		}
+		return sTf;
+	}
+
 	private static Map<String, String> sDeviceInfo;
 
-	public static Map<String, String> collectCrashDeviceInfo(Context ctx) {
+	public static Map<String, String> getDeviceInfo(Context ctx) {
 		if (sDeviceInfo == null) {
 			sDeviceInfo = new HashMap<String, String>();
 			try {
