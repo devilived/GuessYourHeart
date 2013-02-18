@@ -6,5 +6,6 @@
     <string name="menu_exit">Exit</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="error_unknown">未知异常</string>
+    <string name="img_desc">img_desc</string>
 
 </resources>
